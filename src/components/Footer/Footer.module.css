@@ -1,0 +1,91 @@
+.footer {
+  background: linear-gradient(135deg, #162338 0%, #223a5d 100%);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: auto;
+  padding: 2.5rem 1.5rem 1.25rem;
+}
+
+.footerInner {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.brandBlock {
+  max-width: 330px;
+}
+
+.brandName {
+  color: white;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.institution {
+  margin: 0.45rem 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.75rem;
+  padding-top: 0.25rem;
+}
+
+.footerLink {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: white;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 1rem;
+}
+
+.copyright,
+.footerNote {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 2rem 1.25rem 1rem;
+  }
+
+  .footerTop,
+  .footerBottom {
+    flex-direction: column;
+  }
+
+  .footerTop {
+    gap: 1.25rem;
+  }
+
+  .footerLinks {
+    justify-content: flex-start;
+    gap: 1.25rem;
+  }
+}

@@ -1,0 +1,324 @@
+.profileLayout {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.cover {
+  background: linear-gradient(
+    135deg,
+    var(--richfield-blue),
+    var(--richfield-blue-light)
+  );
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L40 20L20 40L0 20z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: 0 2rem 2rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.avatarArea {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: -48px;
+  margin-bottom: 1.5rem;
+}
+
+.avatarBlock {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid var(--richfield-white);
+  box-shadow: var(--shadow-md);
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.meta h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--text-strong);
+}
+
+.adminBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5d76e;
+  color: #7a5400;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.studentId {
+  font-size: 0.85rem;
+  color: var(--richfield-mid-grey);
+  margin: 0;
+}
+
+.campusBadge {
+  display: inline-block;
+  background: rgba(0, 48, 135, 0.08);
+  color: var(--richfield-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-top: 6px;
+}
+
+.feedButton {
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+.feedButton:hover {
+  background: var(--richfield-blue-light);
+}
+
+.statsRow {
+  display: flex;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--richfield-light-grey);
+  border-bottom: 1px solid var(--richfield-light-grey);
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNum {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--richfield-blue);
+}
+
+.statLbl {
+  font-size: 0.78rem;
+  color: var(--richfield-mid-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--richfield-mid-grey);
+  margin-bottom: 4px;
+}
+
+.infoValue {
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
+.section {
+  margin-bottom: 1.75rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--richfield-light-grey);
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.sectionHeader h3 {
+  font-size: 1rem;
+  color: var(--text-strong);
+  margin: 0;
+}
+
+.toggleIcon {
+  font-size: 0.8rem;
+  color: var(--richfield-mid-grey);
+  transition: transform 0.25s ease;
+}
+.toggleIcon.collapsed {
+  transform: rotate(-90deg);
+}
+
+/* CSS-only accordion — no JS height measurement needed */
+.sectionContent {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.sectionContent.collapsed {
+  grid-template-rows: 0fr;
+}
+.sectionContentInner {
+  overflow: hidden;
+}
+
+.bioText {
+  color: var(--richfield-mid-grey);
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: rgba(0, 48, 135, 0.08);
+  color: var(--richfield-blue);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+
+.notLoggedIn {
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.bigIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.notLoggedIn h2 {
+  color: var(--richfield-blue);
+  margin-bottom: 0.75rem;
+}
+
+.notLoggedIn p {
+  color: var(--richfield-mid-grey);
+  margin-bottom: 1.5rem;
+}
+
+.registerLink {
+  display: inline-block;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.signOutButton {
+  background: transparent;
+  border: 1.5px solid var(--richfield-mid-grey);
+  color: var(--richfield-mid-grey);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.signOutButton:hover {
+  background: var(--richfield-mid-grey);
+  color: var(--richfield-white);
+}
+
+.editButton {
+  background: transparent;
+  border: 1.5px solid var(--richfield-blue);
+  color: var(--richfield-blue);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.editButton:hover {
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 0 1.25rem 1.5rem;
+  }
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+  .statsRow {
+    gap: 1.25rem;
+  }
+}

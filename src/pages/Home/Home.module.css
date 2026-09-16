@@ -1,0 +1,231 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--richfield-blue) 0%,
+    var(--richfield-blue-light) 100%
+  );
+  color: var(--richfield-white);
+  text-align: center;
+  padding: 5rem 1.5rem 3rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='20' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.heroContent {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.heroHeading {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heroHeading em {
+  font-style: normal;
+  color: var(--richfield-red);
+}
+
+.heroText {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+
+.heroActions {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.btnBlue {
+  background-color: var(--richfield-blue);
+  color: var(--richfield-white);
+  border-color: var(--richfield-red);
+}
+.btnBlue:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--richfield-white);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.btnOutline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.heroStats {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heroStat {
+  text-align: center;
+}
+
+.statNum {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--richfield-red);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.featuresSection {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--richfield-blue);
+  margin-bottom: 0.5rem;
+}
+
+.sectionHeader h2 {
+  color: var(--text-strong);
+  margin-bottom: 0.5rem;
+}
+
+.sectionHeader p {
+  color: var(--richfield-mid-grey);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  position: relative;
+  background-color: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--richfield-blue),
+    var(--richfield-blue-light)
+  );
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.featureIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background-color: rgba(0, 48, 135, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h3 {
+  color: var(--richfield-blue);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--richfield-mid-grey);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+  .heroStats {
+    gap: 1.5rem;
+  }
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,175 @@
+.pageHero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--richfield-blue), var(--richfield-blue-light));
+  color: var(--richfield-white);
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.pageHero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='20' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.breadcrumb {
+  position: relative;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+.breadcrumb a {
+  color: var(--richfield-white);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.pageHero h1 {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.pageHero h1 em {
+  font-style: normal;
+  color: var(--richfield-red);
+}
+
+.pageHero p {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.about {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.purpose {
+  margin-bottom: 3rem;
+}
+
+.purpose h2 {
+  color: var(--richfield-blue);
+  margin-bottom: 1rem;
+}
+
+.purpose p {
+  color: var(--richfield-mid-grey);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.guidelines {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--richfield-blue);
+  margin-bottom: 0.5rem;
+}
+
+.guidelines h2 {
+  color: var(--text-strong);
+  margin-bottom: 1.5rem;
+}
+
+.guidelinesList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.guidelinesList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+}
+
+.guidelineNumber {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guidelinesList p {
+  margin: 0;
+  color: var(--richfield-mid-grey);
+}
+
+.contact {
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+}
+
+.contact h2 {
+  color: var(--richfield-blue);
+  margin-bottom: 1.25rem;
+}
+
+.contactRow {
+  padding: 0.75rem 0;
+}
+.contactRow + .contactRow {
+  border-top: 1px solid var(--richfield-light-grey);
+}
+
+.contactRow strong {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--richfield-mid-grey);
+  margin-bottom: 0.4rem;
+}
+
+.contactRow p {
+  margin: 0.2rem 0;
+  color: var(--text-strong);
+}
+
+.contactRow a {
+  color: var(--richfield-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+.contactRow a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .pageHero {
+    padding: 3rem 1rem;
+  }
+  .about {
+    padding: 2rem 1rem;
+  }
+}

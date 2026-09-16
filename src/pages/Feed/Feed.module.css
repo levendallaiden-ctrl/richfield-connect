@@ -1,0 +1,201 @@
+.feedLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.sidebarCard {
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.sidebarCard h3 {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.sAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  border: 3px solid var(--richfield-red); /* the one restrained red accent on this page */
+}
+
+.sName {
+  font-weight: 700;
+  text-align: center;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.sId {
+  font-size: 0.8rem;
+  color: var(--richfield-mid-grey);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sCampus {
+  display: block;
+  text-align: center;
+  background: rgba(0, 48, 135, 0.08);
+  color: var(--richfield-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin: 0 auto 0.75rem;
+  width: fit-content;
+}
+
+.sidebarBtn,
+.sidebarBtnOutline {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.sidebarBtn {
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+}
+.sidebarBtn:hover {
+  background: var(--richfield-blue-light);
+}
+
+.sidebarBtnOutline {
+  background: transparent;
+  color: var(--richfield-blue);
+  border: 1.5px solid var(--richfield-blue);
+}
+.sidebarBtnOutline:hover {
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+}
+
+.trendingTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.trendingTag {
+  display: inline-block;
+  background: var(--richfield-light-grey);
+  color: var(--richfield-blue);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.feedMain {
+  min-width: 0; /* stops long post text from overflowing the grid track */
+}
+
+.feedHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.feedHeader h1 {
+  color: var(--richfield-blue);
+}
+
+.postCount {
+  font-size: 0.85rem;
+  color: var(--richfield-mid-grey);
+}
+
+.emptyFeed {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background: var(--surface);
+  border: 1px dashed var(--richfield-light-grey);
+  border-radius: var(--radius-lg);
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.emptyFeed p {
+  color: var(--richfield-mid-grey);
+}
+
+.notLoggedIn {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.notLoggedIn h2 {
+  color: var(--richfield-blue);
+  margin-bottom: 0.75rem;
+}
+
+.notLoggedIn p {
+  color: var(--richfield-mid-grey);
+  margin-bottom: 1.5rem;
+}
+
+.registerLink {
+  display: inline-block;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .feedLayout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    grid-template-columns: 1fr;
+  }
+}

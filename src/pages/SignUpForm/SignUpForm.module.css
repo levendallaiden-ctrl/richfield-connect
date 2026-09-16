@@ -1,0 +1,136 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.form {
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem 2rem;
+}
+
+.strengthBar {
+  height: 4px;
+  background: var(--richfield-light-grey);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.strengthFill {
+  height: 100%;
+  border-radius: 2px;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.strengthText {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.passwordStrength {
+  margin-top: 6px;
+}
+
+.fieldGroup {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldGroup label {
+  font-weight: 600;
+  color: var(--richfield-blue);
+  margin-bottom: 0.35rem;
+}
+
+.input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--richfield-blue);
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.2);
+}
+
+.inputError {
+  border-color: #c0392b;
+}
+
+.errorMsg {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.charCount {
+  font-size: 0.8rem;
+  color: var(--richfield-mid-grey);
+  margin-top: 0.25rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  color: var(--richfield-mid-grey);
+  margin-bottom: 0.4rem;
+}
+
+.submitButton {
+  background-color: var(--richfield-blue);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+}
+
+.authMeta {
+  display: flex;
+  justify-content: flex-end;
+  margin: -0.35rem 0 1rem;
+  font-weight: 600;
+}
+
+.authMeta a {
+  color: var(--richfield-mid-grey);
+}
+
+.authSubmit {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    padding: 1.5rem 1rem;
+  }
+}
