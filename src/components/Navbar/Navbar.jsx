@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useApp } from "../../context/AppContext";
 import { useTheme } from "../../context/ThemeContext";
-import styles from "./Navbar.module.css";
+import styles from "./NavBar.module.css";
 
 const navItems = [
   { to: "/", label: "Home", end: true },
