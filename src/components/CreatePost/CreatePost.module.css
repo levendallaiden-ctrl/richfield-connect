@@ -11,7 +11,30 @@
   outline-offset: -10px;
 }
 
+.composerTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.composerAvatar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #2f7fe0, #0057b8);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  box-shadow: 0 0 0 4px rgba(214, 40, 40, 0.75);
+}
+
 .textarea {
+  flex: 1;
   width: 100%;
   min-height: 100px;
   padding: 0.8rem 1rem;

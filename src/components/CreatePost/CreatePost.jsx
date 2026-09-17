@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useApp } from "../../context/AppContext";
 import styles from "./CreatePost.module.css";
+import { getInitials } from "../../utils/getInitials";
 
 function CreatePost() {
-  const { addPost, showToast } = useApp();
+  const { user, addPost, showToast } = useApp();
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
   const [attachment, setAttachment] = useState(null);
@@ -50,15 +51,20 @@ function CreatePost() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.createPost}>
-      <textarea
-        value={content}
-        onChange={handleChange}
-        placeholder="Share something with the Richfield community..."
-        rows="3"
-        className={
-          error ? `${styles.textarea} ${styles.textareaError}` : styles.textarea
-        }
-      />
+      <div className={styles.composerTop}>
+        <div className={styles.composerAvatar}>
+          {user ? getInitials(user.fullName) : "?"}
+        </div>
+        <textarea
+          value={content}
+          onChange={handleChange}
+          placeholder="Share something with the Richfield community..."
+          rows="3"
+          className={
+            error ? `${styles.textarea} ${styles.textareaError}` : styles.textarea
+          }
+        />
+      </div>
       {attachment && (
         <div className={styles.attachmentPreview}>
           {attachment.type === "image" ? (
