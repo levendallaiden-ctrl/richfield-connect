@@ -40,4 +40,6 @@ function useTheme() {
   return context;
 }
 
+// The provider and its custom hook intentionally share this module.
+// eslint-disable-next-line react-refresh/only-export-components
 export { ThemeProvider, useTheme };

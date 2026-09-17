@@ -21,7 +21,6 @@ function Profile() {
     accounts,
     posts,
     isHydrated,
-    signOut,
     clearSavedAccount,
     showToast,
   } = useApp();
@@ -35,17 +34,6 @@ function Profile() {
   const isOwnProfile = Boolean(
     user && viewedUser && user.email.toLowerCase() === viewedUser.email.toLowerCase(),
   );
-
-  function handleSignOut() {
-    const confirmed = window.confirm(
-      "Sign out only? This keeps your profile saved on this device so you can sign back in later. Use 'Clear saved account' to permanently delete it.",
-    );
-    if (confirmed) {
-      signOut();
-      showToast("Signed out successfully.", "info");
-      navigate("/signin");
-    }
-  }
 
   function handleClearSavedAccount() {
     const confirmed = window.confirm(
@@ -123,9 +111,6 @@ function Profile() {
               <Link to="/feed" className={styles.feedButton}>
                 📢 Go to Feed
               </Link>
-              <button onClick={handleSignOut} className={styles.signOutButton}>
-                Sign Out
-              </button>
               <button
                 onClick={handleClearSavedAccount}
                 className={styles.signOutButton}

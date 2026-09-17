@@ -1,35 +1,55 @@
 .profileLayout {
+  --ink: #e9eeff;
+  --muted: #98a4c6;
+  --glass: rgba(255, 255, 255, 0.055);
+  --stroke: rgba(255, 255, 255, 0.14);
+  --a1: #0057b8;
+  --a2: #d62828;
+  --a3: #ffffff;
+  --profile-radius-lg: 22px;
+  --profile-radius-sm: 12px;
+
   max-width: 960px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
+  color: var(--ink);
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(820px 420px at 6% -12%, rgba(0, 87, 184, 0.42), transparent 62%),
+    radial-gradient(700px 420px at 98% 2%, rgba(214, 40, 40, 0.28), transparent 58%),
+    radial-gradient(600px 520px at 50% 118%, rgba(255, 255, 255, 0.1), transparent 60%),
+    #071a3d;
+  border-radius: var(--profile-radius-lg);
 }
 
 .cover {
-  background: linear-gradient(
-    135deg,
-    var(--richfield-blue),
-    var(--richfield-blue-light)
-  );
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  height: 160px;
   position: relative;
+  height: 150px;
   overflow: hidden;
+  border-radius: var(--profile-radius-lg) var(--profile-radius-lg) 0 0;
+  background: linear-gradient(120deg, #0057b8, #ffffff 52%, #d62828);
 }
 
 .cover::after {
-  content: "";
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L40 20L20 40L0 20z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+  background-image: radial-gradient(rgba(255, 255, 255, 0.45) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  content: "";
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--richfield-light-grey);
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  padding: 0 2rem 2rem;
-  box-shadow: var(--shadow-md);
   position: relative;
+  padding: 0 2rem 2rem;
+  border: 1px solid var(--stroke);
+  border-top: 0;
+  border-radius: 0 0 var(--profile-radius-lg) var(--profile-radius-lg);
+  background: var(--glass);
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
 }
 
 .avatarArea {
@@ -45,94 +65,143 @@
 .avatarBlock {
   display: flex;
   align-items: flex-end;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background: var(--richfield-blue);
-  color: var(--richfield-white);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 2.4rem;
-  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 5px solid var(--richfield-white);
-  box-shadow: var(--shadow-md);
+  width: 96px;
+  height: 96px;
+  border: 4px solid #071a3d;
+  border-radius: 50%;
+  background: linear-gradient(140deg, var(--a1), var(--a2));
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px var(--stroke), 0 18px 36px -14px rgba(0, 87, 184, 0.9);
 }
 
 .nameRow {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   flex-wrap: wrap;
+  gap: 0.75rem;
   margin-bottom: 4px;
 }
 
+.meta h1,
+.sectionHeader h3,
+.notLoggedIn h2 {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+}
+
 .meta h1 {
-  font-size: 1.6rem;
   margin: 0;
-  color: var(--text-strong);
+  color: #fff;
+  font-size: 1.6rem;
 }
 
 .adminBadge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  background: #f5d76e;
-  color: #7a5400;
+  padding: 0.22rem 0.7rem;
   border-radius: 999px;
-  padding: 0.2rem 0.7rem;
-  font-size: 0.72rem;
+  background: linear-gradient(120deg, #d62828, #ffffff);
+  color: #071a3d;
+  font-size: 0.68rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .studentId {
-  font-size: 0.85rem;
-  color: var(--richfield-mid-grey);
   margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .campusBadge {
   display: inline-block;
-  background: rgba(0, 48, 135, 0.08);
-  color: var(--richfield-blue);
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 3px 12px;
-  border-radius: 999px;
   margin-top: 6px;
+  padding: 3px 12px;
+  border: 1px solid rgba(0, 87, 184, 0.5);
+  border-radius: 999px;
+  background: rgba(0, 87, 184, 0.22);
+  color: #dce9ff;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.editButton,
+.feedButton {
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--profile-radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.editButton {
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.editButton:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .feedButton {
-  background: var(--richfield-blue);
-  color: var(--richfield-white);
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
+  background: linear-gradient(120deg, var(--a1), var(--a2));
+  color: #fff;
+  box-shadow: 0 12px 28px -12px rgba(0, 87, 184, 0.9);
+  transition: filter 0.2s, transform 0.2s;
 }
+
 .feedButton:hover {
-  background: var(--richfield-blue-light);
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.signOutButton {
+  padding: 0.55rem 1.25rem;
+  border: 1px solid #d62828;
+  border-radius: var(--profile-radius-sm);
+  background: #d62828;
+  color: #fff;
+  font: 600 0.85rem/1.2 "DM Sans", "Segoe UI", sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.signOutButton:hover {
+  border-color: #b71f1f;
+  background: #b71f1f;
+  transform: translateY(-1px);
 }
 
 .statsRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 1.25rem 0;
-  border-top: 1px solid var(--richfield-light-grey);
-  border-bottom: 1px solid var(--richfield-light-grey);
   margin-bottom: 1.75rem;
-  flex-wrap: wrap;
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
 }
 
 .statItem {
@@ -141,17 +210,17 @@
 
 .statNum {
   display: block;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--richfield-blue);
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .statLbl {
-  font-size: 0.78rem;
-  color: var(--richfield-mid-grey);
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .infoGrid {
@@ -162,17 +231,17 @@
 }
 
 .infoLabel {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--richfield-mid-grey);
   margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .infoValue {
+  color: #ffffff;
   font-weight: 500;
-  color: var(--text-strong);
 }
 
 .section {
@@ -183,44 +252,46 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--richfield-light-grey);
   margin-bottom: 1rem;
+  border-bottom: 1px solid var(--stroke);
+  cursor: pointer;
   user-select: none;
 }
 
 .sectionHeader h3 {
-  font-size: 1rem;
-  color: var(--text-strong);
   margin: 0;
+  color: #fff;
+  font-size: 1rem;
 }
 
 .toggleIcon {
+  color: var(--muted);
   font-size: 0.8rem;
-  color: var(--richfield-mid-grey);
   transition: transform 0.25s ease;
 }
+
 .toggleIcon.collapsed {
   transform: rotate(-90deg);
 }
 
-/* CSS-only accordion — no JS height measurement needed */
 .sectionContent {
   display: grid;
   grid-template-rows: 1fr;
   transition: grid-template-rows 0.3s ease;
 }
+
 .sectionContent.collapsed {
   grid-template-rows: 0fr;
 }
+
 .sectionContentInner {
   overflow: hidden;
 }
 
 .bioText {
-  color: var(--richfield-mid-grey);
-  line-height: 1.7;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
 .tags {
@@ -230,94 +301,58 @@
 }
 
 .tag {
-  background: rgba(0, 48, 135, 0.08);
-  color: var(--richfield-blue);
-  font-size: 0.85rem;
-  font-weight: 600;
   padding: 6px 16px;
+  border: 1px solid rgba(0, 87, 184, 0.5);
   border-radius: 999px;
+  background: rgba(0, 87, 184, 0.2);
+  color: #e7f0ff;
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .notLoggedIn {
-  text-align: center;
   padding: 5rem 1.5rem;
+  text-align: center;
 }
 
 .bigIcon {
-  font-size: 3.5rem;
   margin-bottom: 1.25rem;
+  font-size: 3.5rem;
 }
 
 .notLoggedIn h2 {
-  color: var(--richfield-blue);
   margin-bottom: 0.75rem;
+  color: #fff;
 }
 
 .notLoggedIn p {
-  color: var(--richfield-mid-grey);
   margin-bottom: 1.5rem;
+  color: var(--muted);
 }
 
 .registerLink {
   display: inline-block;
-  background: var(--richfield-blue);
-  color: var(--richfield-white);
   padding: 0.75rem 2rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--profile-radius-sm);
+  background: linear-gradient(120deg, var(--a1), var(--a2));
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 600;
-}
-
-.actions {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.signOutButton {
-  background: transparent;
-  border: 1.5px solid var(--richfield-mid-grey);
-  color: var(--richfield-mid-grey);
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
-.signOutButton:hover {
-  background: var(--richfield-mid-grey);
-  color: var(--richfield-white);
-}
-
-.editButton {
-  background: transparent;
-  border: 1.5px solid var(--richfield-blue);
-  color: var(--richfield-blue);
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
-.editButton:hover {
-  background: var(--richfield-blue);
-  color: var(--richfield-white);
 }
 
 @media (max-width: 768px) {
+  .profileLayout {
+    padding: 2rem 1rem;
+  }
+
   .card {
     padding: 0 1.25rem 1.5rem;
   }
+
   .infoGrid {
     grid-template-columns: 1fr;
   }
+
   .statsRow {
     gap: 1.25rem;
   }

@@ -61,12 +61,23 @@ function Feed() {
 
         <div className={styles.sidebarCard}>
           <h3>🔗 Quick Links</h3>
-          <Link to="/signup" className={styles.sidebarBtnOutline}>
+          <Link to="/profile/edit" className={styles.sidebarBtnOutline}>
             Edit Profile
+          </Link>
+          <Link to="/people" className={styles.sidebarBtnOutline}>
+            Browse People
           </Link>
           <Link to="/about" className={styles.sidebarBtnOutline}>
             About Platform
           </Link>
+          <Link to="/" className={styles.sidebarBtnOutline}>
+            Home
+          </Link>
+          {user.role === "admin" || user.isAdmin ? (
+            <Link to="/admin" className={styles.sidebarBtnOutline}>
+              Admin Dashboard
+            </Link>
+          ) : null}
         </div>
       </aside>
 
