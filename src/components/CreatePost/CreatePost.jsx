@@ -93,10 +93,10 @@ function CreatePost() {
             onChange={(event) => handleFileChange(event, "file")}
           />
         </label>
+        <button type="submit" className={styles.postButton}>
+          Post
+        </button>
       </div>
-      <button type="submit" className={styles.postButton}>
-        Post
-      </button>
     </form>
   );
 }
