@@ -1,4 +1,6 @@
 .feedLayout {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 2rem;
@@ -6,6 +8,35 @@
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
   align-items: start;
+}
+
+.feedLayout::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(700px 360px at 8% 0%, rgba(0, 87, 184, 0.22), transparent 65%),
+    radial-gradient(620px 420px at 94% 22%, rgba(214, 40, 40, 0.14), transparent 66%),
+    linear-gradient(145deg, #eef4ff 0%, #f8fbff 52%, #fff5f5 100%);
+  content: "";
+}
+
+.feedLayout::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background-image: radial-gradient(rgba(0, 48, 135, 0.1) 1px, transparent 1px);
+  background-size: 28px 28px;
+  content: "";
+  opacity: 0.32;
 }
 
 .sidebar {
