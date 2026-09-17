@@ -1,4 +1,6 @@
 .profileLayout {
+  position: relative;
+  isolation: isolate;
   --ink: #e9eeff;
   --muted: #98a4c6;
   --glass: rgba(255, 255, 255, 0.055);
@@ -20,6 +22,18 @@
     radial-gradient(600px 520px at 50% 118%, rgba(255, 255, 255, 0.1), transparent 60%),
     #071a3d;
   border-radius: var(--profile-radius-lg);
+}
+
+.profileLayout::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #071a3d;
+  content: "";
 }
 
 .cover {
@@ -177,7 +191,7 @@
   transform: translateY(-1px);
 }
 
-.signOutButton {
+.clearAccountButton {
   padding: 0.55rem 1.25rem;
   border: 1px solid #d62828;
   border-radius: var(--profile-radius-sm);
@@ -188,7 +202,7 @@
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
 }
 
-.signOutButton:hover {
+.clearAccountButton:hover {
   border-color: #b71f1f;
   background: #b71f1f;
   transform: translateY(-1px);

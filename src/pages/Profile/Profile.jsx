@@ -113,8 +113,7 @@ function Profile() {
               </Link>
               <button
                 onClick={handleClearSavedAccount}
-                className={styles.signOutButton}
-                style={{ background: "#c0392b" }}
+                className={styles.clearAccountButton}
               >
                 Clear saved account
               </button>
