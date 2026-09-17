@@ -89,7 +89,7 @@ function AppProvider({ children }) {
     return true;
   }
 
-  function addPost(content) {
+  function addPost(content, attachment = null) {
     const newPost = {
       id: crypto.randomUUID(),
       username: user ? user.fullName : "Anonymous",
@@ -98,6 +98,7 @@ function AppProvider({ children }) {
       likes: 0,
       liked: false,
       comments: [], // new
+      attachment,
     };
     setPosts((prevPosts) => [newPost, ...prevPosts]);
   }

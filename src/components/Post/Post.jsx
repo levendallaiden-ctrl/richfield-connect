@@ -53,6 +53,24 @@ function Post({ post }) {
 
       <p className={styles.content}>{post.content}</p>
 
+      {post.attachment?.type === "image" && (
+        <img
+          className={styles.postImage}
+          src={post.attachment.dataUrl}
+          alt={post.attachment.name}
+        />
+      )}
+
+      {post.attachment?.type === "file" && (
+        <a
+          className={styles.fileAttachment}
+          href={post.attachment.dataUrl}
+          download={post.attachment.name}
+        >
+          📎 {post.attachment.name}
+        </a>
+      )}
+
       <div className={styles.actions}>
         <button
           onClick={() => toggleLike(post.id)}
