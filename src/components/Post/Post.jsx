@@ -1,16 +1,26 @@
 import { useState } from "react";
 import { useApp } from "../../context/AppContext";
 import styles from "./Post.module.css";
+import { getInitials } from "../../utils/getInitials";
 
 function Post({ post }) {
-  const { user, toggleLike, deletePost, addComment, deleteComment, showToast } =
-    useApp();
+  const {
+    user,
+    accounts,
+    toggleLike,
+    deletePost,
+    addComment,
+    deleteComment,
+    showToast,
+  } = useApp();
   const [commentsOpen, setCommentsOpen] = useState(false);
   const [commentText, setCommentText] = useState("");
 
   // Same fallback as in addComment — protects against posts saved before
   // this feature existed, which have no comments array in localStorage.
   const comments = post.comments || [];
+  const author = accounts.find((account) => account.fullName === post.username);
+  const authorIsAdmin = Boolean(author?.role === "admin" || author?.isAdmin);
   const isAdmin = user && (user.role === "admin" || user.isAdmin);
   const canDeletePost = Boolean(
     user && (isAdmin || post.username === user.fullName),
@@ -47,8 +57,21 @@ function Post({ post }) {
   return (
     <div className={styles.post}>
       <div className={styles.header}>
-        <span className={styles.username}>{post.username}</span>
-        <span className={styles.timestamp}>{post.timestamp}</span>
+        <div className={styles.authorBlock}>
+          <div className={styles.postAvatar}>
+            {getInitials(post.username)}
+          </div>
+          <div className={styles.authorDetails}>
+            <p className={styles.username}>
+              {post.username}
+              {authorIsAdmin && <span className={styles.postBadge}>Admin</span>}
+            </p>
+            <p className={styles.timestamp}>
+              {post.timestamp}
+              {author?.campus ? ` · ${author.campus}` : ""}
+            </p>
+          </div>
+        </div>
       </div>
 
       <p className={styles.content}>{post.content}</p>

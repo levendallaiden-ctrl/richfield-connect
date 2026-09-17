@@ -25,19 +25,59 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
 
+.authorBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.postAvatar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #ff9aa6, #e04141);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.authorDetails {
+  min-width: 0;
+}
+
 .username {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
   color: #16233c;
   font-weight: 800;
 }
 
 .timestamp {
+  margin: 0.2rem 0 0;
   color: #7b8aa3;
   font-size: 0.78rem;
+}
+
+.postBadge {
+  padding: 0.16rem 0.6rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #e04141, #c0392b);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .content {
