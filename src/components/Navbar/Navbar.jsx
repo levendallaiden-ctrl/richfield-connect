@@ -68,24 +68,28 @@ function Navbar() {
                 </NavLink>
               </li>
             )}
-            <li>
-              <NavLink
-                to="/signin"
-                className={styles.link}
-                onClick={() => setIsOpen(false)}
-              >
-                Sign In
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/signup"
-                className={ctaClass}
-                onClick={() => setIsOpen(false)}
-              >
-                Join Now
-              </NavLink>
-            </li>
+            {!user && (
+              <>
+                <li>
+                  <NavLink
+                    to="/signin"
+                    className={styles.link}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Sign In
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/signup"
+                    className={ctaClass}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Join Now
+                  </NavLink>
+                </li>
+              </>
+            )}
           </ul>
 
           <button

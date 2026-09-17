@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route, useLocation } from "react-router-dom";
 import { AppProvider } from "./context/AppContext";
+import { useApp } from "./context/AppContext";
 import { ThemeProvider } from "./context/ThemeContext";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -36,8 +37,30 @@ function AppLayout() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/signup" element={<SignUpForm />} />
-            <Route path="/signin" element={<SignInForm />} />
+            <Route
+              path="/signup"
+              element={
+                <SignedOutOnly>
+                  <SignUpForm />
+                </SignedOutOnly>
+              }
+            />
+            <Route
+              path="/signin"
+              element={
+                <SignedOutOnly>
+                  <SignInForm />
+                </SignedOutOnly>
+              }
+            />
+            <Route
+              path="/profile/edit"
+              element={
+                <SignedInOnly>
+                  <SignUpForm />
+                </SignedInOnly>
+              }
+            />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/profile/:email" element={<Profile />} />
@@ -52,6 +75,18 @@ function AppLayout() {
       <Toast />
     </div>
   );
+}
+
+function SignedOutOnly({ children }) {
+  const { user } = useApp();
+
+  return user ? <Navigate to="/profile" replace /> : children;
+}
+
+function SignedInOnly({ children }) {
+  const { user } = useApp();
+
+  return user ? children : <Navigate to="/signin" replace />;
 }
 
 function App() {

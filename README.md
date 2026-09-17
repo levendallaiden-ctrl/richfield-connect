@@ -56,6 +56,7 @@ the light/dark theme.
 - `/signin` - Sign in
 - `/reset-password` - Reset a saved account password
 - `/profile` - Current user profile
+- `/profile/edit` - Edit the signed-in user's profile
 - `/profile/:email` - Public profile for another saved account
 - `/people` - Searchable community directory
 - `/feed` - Community posts

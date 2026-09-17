@@ -117,7 +117,7 @@ function Profile() {
           </div>
           {isOwnProfile ? (
             <div className={styles.actions}>
-              <Link to="/signup" className={styles.editButton}>
+              <Link to="/profile/edit" className={styles.editButton}>
                 ✏️ Edit Profile
               </Link>
               <Link to="/feed" className={styles.feedButton}>
