@@ -199,7 +199,30 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
+  align-items: flex-start;
+}
+
+.commentAvatar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #8fc3ff, #0057b8);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.commentBody {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
   align-items: baseline;
+  gap: 0.45rem;
+  min-width: 0;
 }
 
 .commentUsername {
@@ -221,9 +244,32 @@
   gap: 0.75rem;
 }
 
+.commentActions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .commentTimestamp {
   font-size: 0.72rem;
   color: #7b8aa3;
+}
+
+.commentLike {
+  padding: 0.25rem 0.65rem;
+  border: 0;
+  border-radius: 999px;
+  background: #f4f7fc;
+  color: #5a6b86;
+  font: 800 0.72rem/1.2 "DM Sans", "Segoe UI", sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.commentLike:hover,
+.commentLiked {
+  background: #ffecec;
+  color: #c0392b;
 }
 
 .commentDelete {

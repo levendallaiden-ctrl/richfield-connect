@@ -132,6 +132,8 @@ function AppProvider({ children }) {
                   username: user ? user.fullName : "Anonymous",
                   timestamp: new Date().toLocaleString(),
                   content,
+                  likes: 0,
+                  liked: false,
                 },
               ],
             }
@@ -148,6 +150,29 @@ function AppProvider({ children }) {
               ...post,
               comments: (post.comments || []).filter(
                 (comment) => comment.id !== commentId,
+              ),
+            }
+          : post,
+      ),
+    );
+  }
+
+  function toggleCommentLike(postId, commentId) {
+    setPosts((prevPosts) =>
+      prevPosts.map((post) =>
+        post.id === postId
+          ? {
+              ...post,
+              comments: (post.comments || []).map((comment) =>
+                comment.id === commentId
+                  ? {
+                      ...comment,
+                      liked: !comment.liked,
+                      likes: comment.liked
+                        ? Math.max(0, comment.likes - 1)
+                        : comment.likes + 1,
+                    }
+                  : comment,
               ),
             }
           : post,
@@ -246,6 +271,7 @@ function AppProvider({ children }) {
     deletePost,
     addComment,
     deleteComment,
+    toggleCommentLike,
     showToast,
     clearToast,
     signOut,

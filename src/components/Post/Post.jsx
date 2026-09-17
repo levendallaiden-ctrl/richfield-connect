@@ -11,6 +11,7 @@ function Post({ post }) {
     deletePost,
     addComment,
     deleteComment,
+    toggleCommentLike,
     showToast,
   } = useApp();
   const [commentsOpen, setCommentsOpen] = useState(false);
@@ -140,10 +141,15 @@ function Post({ post }) {
                 return (
                   <li key={comment.id} className={styles.comment}>
                     <div className={styles.commentMain}>
-                      <span className={styles.commentUsername}>
-                        {comment.username}
-                      </span>
-                      <span className={styles.commentText}>{comment.content}</span>
+                      <div className={styles.commentAvatar}>
+                        {getInitials(comment.username)}
+                      </div>
+                      <div className={styles.commentBody}>
+                        <span className={styles.commentUsername}>
+                          {comment.username}
+                        </span>
+                        <span className={styles.commentText}>{comment.content}</span>
+                      </div>
                     </div>
 
                     <div className={styles.commentMetaRow}>
@@ -151,15 +157,28 @@ function Post({ post }) {
                         {comment.timestamp}
                       </span>
 
-                      {canDeleteComment && (
+                      <div className={styles.commentActions}>
                         <button
                           type="button"
-                          className={styles.commentDelete}
-                          onClick={() => handleCommentDelete(comment.id)}
+                          className={
+                            comment.liked
+                              ? `${styles.commentLike} ${styles.commentLiked}`
+                              : styles.commentLike
+                          }
+                          onClick={() => toggleCommentLike(post.id, comment.id)}
                         >
-                          Delete
+                          {comment.liked ? "♥" : "♡"} {comment.likes || 0}
                         </button>
-                      )}
+                        {canDeleteComment && (
+                          <button
+                            type="button"
+                            className={styles.commentDelete}
+                            onClick={() => handleCommentDelete(comment.id)}
+                          >
+                            Delete
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </li>
                 );
