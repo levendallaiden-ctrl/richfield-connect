@@ -123,6 +123,12 @@
   background: var(--richfield-blue-light) !important;
 }
 
+.signOutLink {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 .themeToggle {
   background: none;
   border: 1.5px solid var(--richfield-light-grey);

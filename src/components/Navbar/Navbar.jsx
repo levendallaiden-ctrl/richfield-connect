@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useApp } from "../../context/AppContext";
 import { useTheme } from "../../context/ThemeContext";
 import styles from "./NavBar.module.css";
@@ -14,8 +14,9 @@ const navItems = [
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { user } = useApp();
+  const { user, signOut, showToast } = useApp();
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   function linkClass({ isActive }) {
     return isActive ? `${styles.link} ${styles.active}` : styles.link;
@@ -25,6 +26,17 @@ function Navbar() {
     return isActive
       ? `${styles.link} ${styles.joinLink} ${styles.active}`
       : `${styles.link} ${styles.joinLink}`;
+  }
+
+  function handleSignOut() {
+    const confirmed = window.confirm("Are you sure you want to sign out?");
+
+    if (!confirmed) return;
+
+    signOut();
+    showToast("Signed out successfully.", "info");
+    setIsOpen(false);
+    navigate("/signin");
   }
 
   return (
@@ -69,27 +81,35 @@ function Navbar() {
               </li>
             )}
             {!user && (
-              <>
-                <li>
-                  <NavLink
-                    to="/signin"
-                    className={styles.link}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Sign In
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/signup"
-                    className={ctaClass}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Join Now
-                  </NavLink>
-                </li>
-              </>
+              <li>
+                <NavLink
+                  to="/signin"
+                  className={styles.link}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Sign In
+                </NavLink>
+              </li>
             )}
+            <li>
+              {user ? (
+                <button
+                  type="button"
+                  className={`${styles.link} ${styles.joinLink} ${styles.signOutLink}`}
+                  onClick={handleSignOut}
+                >
+                  Sign Out
+                </button>
+              ) : (
+                <NavLink
+                  to="/signup"
+                  className={ctaClass}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Join Now
+                </NavLink>
+              )}
+            </li>
           </ul>
 
           <button
