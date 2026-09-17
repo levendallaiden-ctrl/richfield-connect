@@ -5,10 +5,15 @@ import ProfilePreview from "../../components/ProfilePreview/ProfilePreview";
 import styles from "./SignUpForm.module.css";
 
 const campusOptions = [
-  "Durban Campus",
-  "Cape Town Campus",
   "Bryanston Campus",
+  "Cape Town Campus",
+  "Umhlanga Campus",
+  "Musgrave Campus",
+  "Polokwane New Premium Campus",
+  "Newtown Junction Campus",
   "Centurion Campus",
+  "Pretoria Campus",
+  "Online Learning",
 ];
 const interestOptions = [
   "Programming",

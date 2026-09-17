@@ -125,8 +125,9 @@ npm run preview   # Preview the production build locally
   `src/pages/SignUpForm/SignUpForm.jsx`; this is a client-side prototype gate,
   not a secure authorization system. The development shortcut is similarly
   intended only for local testing.
-- Campus options reflect Richfield's real campuses (Durban, Cape Town,
-  Bryanston, Centurion)
+- Campus options reflect Richfield's official locations: Bryanston, Cape Town,
+  Umhlanga, Musgrave, Polokwane New Premium, Newtown Junction, Centurion,
+  Pretoria, and Online Learning
 - Profile's Posts count is calculated live from real post data; Connections
   and Groups are deterministic placeholders seeded from the student number,
   since the brief doesn't require a friends/groups feature
