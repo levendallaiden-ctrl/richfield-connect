@@ -1,11 +1,12 @@
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    var(--richfield-blue) 0%,
-    var(--richfield-blue-light) 100%
-  );
+  background-image:
+    linear-gradient(135deg, rgba(0, 48, 135, 0.9), rgba(0, 87, 184, 0.68)),
+    url("https://cdn.sanity.io/images/hcy7muav/production/272412261b37bd7ae61af32d27aa9b3deae80287-1440x315.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--richfield-white);
   text-align: center;
   padding: 5rem 1.5rem 3rem;
@@ -15,7 +16,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='20' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+  background: linear-gradient(90deg, rgba(0, 48, 135, 0.16), rgba(214, 72, 63, 0.14));
 }
 
 .heroContent {
