@@ -1,43 +1,55 @@
+.signupPage {
+  --richfield-blue: #0057b8;
+  --richfield-blue-light: #2f7fe0;
+  --richfield-red: #d62828;
+  --richfield-ink: #16233c;
+  --richfield-mid-grey: #7b8aa3;
+  --richfield-surface: #ffffff;
+  --richfield-border: #e6eefb;
+  --radius-lg: 22px;
+  --radius-sm: 16px;
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  color: var(--richfield-ink);
+  border-radius: 22px;
+  font-family: "Nunito", "Inter", sans-serif;
+  background: linear-gradient(160deg, #ffffff 0%, #f4f8ff 50%, #fff6f7 100%);
+  overflow: hidden;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 380px;
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  align-items: start;
 }
 
 .form {
-  background: var(--surface);
-  border: 1px solid var(--richfield-light-grey);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 20px;
+  box-shadow: 0 30px 54px -40px rgba(0, 60, 140, 0.95);
   padding: 2.5rem 2rem;
 }
 
-.strengthBar {
-  height: 4px;
-  background: var(--richfield-light-grey);
-  border-radius: 2px;
-  overflow: hidden;
-  margin-bottom: 4px;
+.form h1 {
+  margin: 0 0 0.4rem;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--richfield-blue);
 }
 
-.strengthFill {
-  height: 100%;
-  border-radius: 2px;
-  transition:
-    width 0.3s ease,
-    background-color 0.3s ease;
+.form p {
+  margin: 0;
 }
 
-.strengthText {
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.passwordStrength {
-  margin-top: 6px;
+.form :global(a) {
+  color: #c0392b;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .fieldGroup {
@@ -46,66 +58,114 @@
   flex-direction: column;
 }
 
-.fieldGroup label {
-  font-weight: 600;
+.fieldGroup label,
+.fieldGroup legend {
+  margin-bottom: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 800;
   color: var(--richfield-blue);
-  margin-bottom: 0.35rem;
 }
 
-.input {
-  padding: 0.6rem 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  transition:
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
+.fieldGroup legend {
+  padding: 0;
 }
 
-.input:focus {
+.input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font: 400 0.95rem/1.5 "Nunito", "Inter", sans-serif;
+  color: var(--richfield-ink);
+  background: #f7faff;
+  border: 2px solid var(--richfield-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.input:focus,
+textarea:focus,
+select:focus {
   outline: none;
-  border-color: var(--richfield-blue);
-  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.2);
+  border-color: #9fc4ff;
+  background: #ffffff;
+}
+
+textarea {
+  resize: vertical;
 }
 
 .inputError {
-  border-color: #c0392b;
+  border-color: #ff8fa0 !important;
 }
 
 .errorMsg {
   color: #c0392b;
-  font-size: 0.85rem;
-  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 0.35rem;
 }
 
 .charCount {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--richfield-mid-grey);
-  margin-top: 0.25rem;
+  margin-top: 0.3rem;
 }
 
 .checkboxLabel {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 400;
-  color: var(--richfield-mid-grey);
-  margin-bottom: 0.4rem;
+  gap: 0.55rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #4a5b76;
+}
+
+.checkboxLabel input {
+  accent-color: var(--richfield-blue);
+  transform: scale(1.1);
+}
+
+.passwordStrength {
+  margin-top: 6px;
+}
+
+.strengthBar {
+  height: 6px;
+  margin-bottom: 4px;
+  background: #e6eefb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.strengthFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strengthText {
+  font-size: 0.76rem;
+  font-weight: 800;
 }
 
 .submitButton {
-  background-color: var(--richfield-blue);
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 4px;
-  font-weight: 600;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.85rem 2rem;
+  font: 800 0.9rem/1.2 "Nunito", "Inter", sans-serif;
+  color: #ffffff;
+  background: linear-gradient(120deg, #2f7fe0, #0057b8);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 16px 30px -16px rgba(0, 87, 184, 0.95);
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: filter 0.2s ease;
 }
 
 .submitButton:hover {
-  opacity: 0.9;
+  filter: brightness(1.08);
 }
 
 .authMeta {
@@ -130,7 +190,11 @@
 }
 
 @media (max-width: 480px) {
-  .grid {
+  .signupPage {
     padding: 1.5rem 1rem;
+  }
+
+  .form {
+    padding: 1.5rem 1.25rem;
   }
 }

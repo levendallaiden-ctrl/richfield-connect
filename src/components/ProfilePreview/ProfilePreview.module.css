@@ -4,21 +4,20 @@
 }
 
 .previewLabel {
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--richfield-mid-grey);
+  margin: 0 0 0.75rem;
   text-align: center;
-  margin-bottom: 0.75rem;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7b8aa3;
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--richfield-light-grey);
-  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 30px 54px -40px rgba(0, 60, 140, 0.95);
   animation: slideIn 0.4s ease-out;
 }
 
@@ -34,116 +33,119 @@
 }
 
 .cardHeader {
-  background: linear-gradient(
-    135deg,
-    var(--richfield-blue),
-    var(--richfield-blue-light)
-  );
-  padding: 1.5rem 1.25rem 3.5rem;
   position: relative;
+  padding: 1.5rem 1.25rem 3.75rem;
+  background:
+    radial-gradient(220px 120px at 10% 20%, rgba(255, 255, 255, 0.55), transparent 70%),
+    linear-gradient(120deg, #8fc3ff, #2f7fe0 55%, #ffb3c6);
 }
 
 .headerLabel {
   display: block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 6px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .cardHeader h3 {
-  color: var(--richfield-white);
-  font-size: 0.95rem;
   margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .avatarWrap {
   position: absolute;
-  bottom: -32px;
+  bottom: -34px;
   left: 20px;
 }
 
 .avatar {
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
-  background: var(--richfield-red);
-  border: 4px solid var(--richfield-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--richfield-white);
-  box-shadow: var(--shadow-md);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(140deg, #ff9aa6, #e04141);
+  border: 5px solid #ffffff;
+  box-shadow: 0 14px 26px -14px rgba(214, 40, 40, 0.9);
 }
 
 .body {
-  padding: 2.5rem 1.25rem 1.5rem;
+  padding: 2.75rem 1.25rem 1.5rem;
 }
 
 .name {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text-strong);
   margin: 0 0 2px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #16233c;
 }
 
 .studentId {
-  font-size: 0.8rem;
-  color: var(--richfield-mid-grey);
   margin: 0 0 10px;
+  font-size: 0.8rem;
+  color: #7b8aa3;
 }
 
 .campusTag {
   display: inline-block;
-  background: rgba(0, 48, 135, 0.08);
-  color: var(--richfield-blue);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 999px;
   margin-bottom: 10px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #1a5bb8;
+  background: #e8f1ff;
 }
 
 .bio {
-  font-size: 0.88rem;
-  color: var(--richfield-mid-grey);
   min-height: 40px;
   margin-bottom: 1rem;
+  font-size: 0.88rem;
+  color: #4a5b76;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .tag {
-  background: rgba(0, 48, 135, 0.08);
-  color: var(--richfield-blue);
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #1a5bb8;
+  background: #eef4ff;
+}
+
+.tag:nth-child(even) {
+  color: #c0392b;
+  background: #ffecec;
 }
 
 .tagPlaceholder {
-  color: #999;
   font-size: 0.82rem;
   font-style: italic;
+  color: #9aabc4;
 }
 
 .footer {
-  border-top: 1px solid var(--richfield-light-grey);
-  padding: 12px;
-  font-size: 0.75rem;
-  color: var(--richfield-mid-grey);
+  padding: 14px;
   text-align: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: #7b8aa3;
+  border-top: 1px solid #eef2f9;
 }
