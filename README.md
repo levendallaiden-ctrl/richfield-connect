@@ -8,9 +8,10 @@
 ## About This Application
 
 Richfield Connect is a React SPA built for Richfield Graduate Institute of
-Technology. Students can create profiles, sign in, share posts, comment, like
-content, and manage their community presence. Staff accounts have additional
-moderation tools for deleting posts, comments, and user accounts.
+Technology. Students can create profiles, sign in, share posts with optional
+image or file attachments, comment, like content, and manage their community
+presence. Staff accounts have additional moderation tools for deleting posts,
+comments, and user accounts.
 
 The app uses React Router for client-side navigation, Context providers for
 global state, CSS Modules for component styling, and browser localStorage for
@@ -37,8 +38,8 @@ persistence. It is a frontend prototype and does not use a backend server.
   also supports viewing another member's public profile; editing, sign out, and
   account deletion controls are limited to your own profile
 - `Feed` — manages the posts list, renders `CreatePost` and a list of `Post`
-- `CreatePost` — controlled textarea for composing new posts
-- `Post` — individual post card with like, comment, and permission-based delete functionality
+- `CreatePost` — controlled composer for text posts with optional image and file attachments
+- `Post` — individual post card with post likes, comment likes, attachments, and permission-based delete functionality
 - `Admin` — protected staff dashboard with account search, role filtering, statistics,
   and account deletion
 - `Toast` — global notification banner for actions like posting, deleting, and signing out
@@ -81,6 +82,19 @@ npm run dev -- --host 0.0.0.0
 Open `http://YOUR-COMPUTER-IP:5173` on the phone. On Windows, find the local
 IP with `ipconfig`. Keep the dev server running while testing.
 
+### Production Preview
+
+Build the optimized production bundle and preview it locally:
+
+```bash
+npm run build
+npm run preview
+```
+
+The project is Vercel-ready. Vercel can deploy it directly from the `main`
+branch using the standard Vite settings: `npm run build` as the build command
+and `dist` as the output directory.
+
 ## Testing Admin Features
 
 Admin tools can be tested locally without a backend:
@@ -119,6 +133,9 @@ npm run preview   # Preview the production build locally
 ## Design Notes
 
 - CSS Modules used throughout for component-scoped styling
+- The sign-up form and live profile preview use the Soft Campus visual variant:
+  rounded surfaces, pastel blue and red accents, a white base, and responsive
+  form/preview columns
 - Account data, including passwords, is stored in browser localStorage because
   this is a frontend-only prototype. Do not use real passwords or deploy this
   authentication model to production.
@@ -138,6 +155,18 @@ npm run preview   # Preview the production build locally
   Delete are formally specified under the graded functional requirements
 - Signing out clears the active session while keeping the saved account on the
   device. `Clear Saved Account` removes the current account from localStorage.
+- Posts, comments, likes, and attachment metadata are also persisted locally in
+  the browser. Image attachments are stored as data URLs, so large files can
+  consume localStorage quickly.
+
+## Deployment Limitations
+
+This application currently has no backend, database, real session management,
+or server-side authorization. Admin roles, passwords, posts, comments, and
+attachments are controlled by client-side code and browser storage. Use the
+project as a demonstration prototype only; a production version should move
+authentication, authorization, persistence, and media storage to a secure
+backend.
 
 ## Note on Project Structure
 
