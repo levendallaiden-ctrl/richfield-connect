@@ -365,3 +365,47 @@
     gap: 1.25rem;
   }
 }
+
+:global(body.dark) .profileLayout {
+  --ink: var(--theme-ink);
+  --muted: var(--theme-muted);
+  --surface: var(--theme-surface);
+  --stroke: var(--theme-stroke);
+  background: var(--theme-page-background);
+}
+
+:global(body.dark) .profileLayout::before {
+  background: var(--theme-page-background);
+}
+
+:global(body.dark) .card {
+  border-color: var(--theme-line);
+  background: var(--surface);
+  box-shadow: 0 24px 50px -28px rgba(0, 0, 0, 0.9);
+}
+
+:global(body.dark) .avatar {
+  border-color: #111a2c;
+}
+
+:global(body.dark) .editButton {
+  border-color: #3b4c68;
+  background: #27334a;
+  color: var(--ink);
+}
+
+:global(body.dark) .editButton:hover {
+  border-color: #526887;
+  background: #33445f;
+}
+
+:global(body.dark) .campusBadge,
+:global(body.dark) .tag {
+  background: #243b61;
+  color: #bcd4ff;
+}
+
+:global(body.dark) .statsRow,
+:global(body.dark) .sectionHeader {
+  border-color: var(--theme-line);
+}

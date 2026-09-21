@@ -284,3 +284,47 @@
     grid-column: auto;
   }
 }
+
+:global(body.dark) .feedLayout {
+  --feed-ink: var(--theme-ink);
+  --feed-muted: var(--theme-muted);
+  --feed-line: var(--theme-line);
+  background: linear-gradient(160deg, #182238 0%, #202d47 50%, #352638 100%);
+}
+
+:global(body.dark) .feedLayout::before {
+  background: linear-gradient(160deg, #111a2c 0%, #1a2943 55%, #2c202f 100%);
+}
+
+:global(body.dark) .sidebarCard,
+:global(body.dark) .emptyFeed {
+  background: var(--theme-surface);
+  box-shadow: 0 24px 44px -34px rgba(0, 0, 0, 0.85);
+}
+
+:global(body.dark) .sCampus,
+:global(body.dark) .trendingTag {
+  background: #243b61;
+  color: #bcd4ff;
+}
+
+:global(body.dark) .trendingTag:nth-child(even) {
+  background: #4a2935;
+  color: #ffb8c0;
+}
+
+:global(body.dark) .sidebarBtnOutline {
+  border-color: #6b3942;
+  background: #2b202b;
+  color: #ffb8c0;
+}
+
+:global(body.dark) .sidebarBtnOutline:hover {
+  border-color: #a95763;
+  background: #392531;
+}
+
+:global(body.dark) .postCount {
+  background: #4a2935;
+  color: #ffb8c0;
+}

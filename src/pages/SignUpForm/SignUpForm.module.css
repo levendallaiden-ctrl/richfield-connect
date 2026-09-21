@@ -198,3 +198,38 @@ textarea {
     padding: 1.5rem 1.25rem;
   }
 }
+
+:global(body.dark) .signupPage {
+  --richfield-ink: var(--theme-ink);
+  --richfield-mid-grey: var(--theme-muted);
+  --richfield-border: var(--theme-line);
+  background: linear-gradient(160deg, #111a2c 0%, #1a2943 50%, #2c202f 100%);
+}
+
+:global(body.dark) .form {
+  background: var(--theme-surface);
+  box-shadow: 0 30px 54px -40px rgba(0, 0, 0, 0.9);
+}
+
+:global(body.dark) .input,
+:global(body.dark) textarea,
+:global(body.dark) select {
+  border-color: var(--theme-line);
+  background: var(--theme-input);
+  color: var(--theme-ink);
+}
+
+:global(body.dark) .input:focus,
+:global(body.dark) textarea:focus,
+:global(body.dark) select:focus {
+  border-color: #6d9fe8;
+  background: #17233a;
+}
+
+:global(body.dark) .checkboxLabel {
+  color: #c3d0e6;
+}
+
+:global(body.dark) .strengthBar {
+  background: var(--theme-line);
+}

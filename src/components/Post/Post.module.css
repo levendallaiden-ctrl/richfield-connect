@@ -326,3 +326,58 @@
 .commentSubmit:hover {
   background: #2f7fe0;
 }
+
+:global(body.dark) .post {
+  background: #1a2336;
+  box-shadow: 0 26px 46px -36px rgba(0, 0, 0, 0.9);
+}
+
+:global(body.dark) .username {
+  color: #eef3ff;
+}
+
+:global(body.dark) .timestamp,
+:global(body.dark) .commentTimestamp {
+  color: #aab8d2;
+}
+
+:global(body.dark) .content,
+:global(body.dark) .commentText {
+  color: #d2dced;
+}
+
+:global(body.dark) .fileAttachment {
+  background: #243b61;
+  color: #bcd4ff;
+}
+
+:global(body.dark) .actions,
+:global(body.dark) .commentList,
+:global(body.dark) .comment {
+  border-color: #34415a;
+}
+
+:global(body.dark) .likeButton,
+:global(body.dark) .commentToggle,
+:global(body.dark) .commentLike {
+  background: #27334a;
+  color: #b9c7df;
+}
+
+:global(body.dark) .liked,
+:global(body.dark) .commentLiked,
+:global(body.dark) .deleteButton,
+:global(body.dark) .commentDelete {
+  background: #4a2935;
+  color: #ffb8c0;
+}
+
+:global(body.dark) .commentDelete {
+  border-color: #6b3942;
+}
+
+:global(body.dark) .commentInput {
+  border-color: #3b4c68;
+  background: #111a2c;
+  color: #eef3ff;
+}

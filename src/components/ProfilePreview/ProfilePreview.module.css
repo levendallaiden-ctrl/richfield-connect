@@ -149,3 +149,33 @@
   color: #7b8aa3;
   border-top: 1px solid #eef2f9;
 }
+
+:global(body.dark) .card {
+  background: #1a2336;
+  box-shadow: 0 30px 54px -40px rgba(0, 0, 0, 0.9);
+}
+
+:global(body.dark) .name {
+  color: #eef3ff;
+}
+
+:global(body.dark) .studentId,
+:global(body.dark) .bio,
+:global(body.dark) .footer {
+  color: #aab8d2;
+}
+
+:global(body.dark) .campusTag,
+:global(body.dark) .tag {
+  background: #243b61;
+  color: #bcd4ff;
+}
+
+:global(body.dark) .tag:nth-child(even) {
+  background: #4a2935;
+  color: #ffb8c0;
+}
+
+:global(body.dark) .footer {
+  border-top-color: #34415a;
+}
