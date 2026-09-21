@@ -1,13 +1,25 @@
 .createPost {
+  --composer-surface: var(--theme-surface);
+  --composer-line: var(--theme-line);
+  --composer-input: var(--theme-input);
+  --composer-ink: var(--theme-ink);
+  --composer-control: var(--theme-control);
+  --composer-control-ink: var(--theme-control-ink);
+  --composer-control-hover: var(--theme-control-hover);
+  --composer-danger-surface: var(--theme-danger-surface);
+  --composer-danger-ink: var(--theme-danger-ink);
+  --composer-placeholder: var(--theme-placeholder);
+  --composer-focus: var(--theme-focus);
+
   display: flex;
   flex-direction: column;
   padding: 1.4rem 1.5rem;
   margin-bottom: 1.25rem;
   border: 0;
   border-radius: 28px;
-  background: #fff;
+  background: var(--composer-surface);
   box-shadow: 0 26px 46px -36px rgba(0, 60, 140, 0.95);
-  outline: 2px dashed #d6e5fb;
+  outline: 2px dashed var(--composer-line);
   outline-offset: -10px;
 }
 
@@ -37,10 +49,10 @@
   width: 100%;
   min-height: 100px;
   padding: 0.8rem 1rem;
-  border: 2px solid #e6eefb;
+  border: 2px solid var(--composer-line);
   border-radius: 18px;
-  background: #f7faff;
-  color: #16233c;
+  background: var(--composer-input);
+  color: var(--composer-ink);
   font: 400 0.95rem/1.55 "DM Sans", "Segoe UI", sans-serif;
   resize: vertical;
   outline: none;
@@ -48,12 +60,12 @@
 }
 
 .textarea::placeholder {
-  color: #9aabc4;
+  color: var(--composer-placeholder);
 }
 
 .textarea:focus {
-  border-color: #9fc4ff;
-  background: #fff;
+  border-color: var(--composer-focus);
+  background: var(--composer-surface);
 }
 
 .attachmentPreview {
@@ -66,8 +78,8 @@
   margin-top: 0.75rem;
   padding: 0.45rem 0.7rem;
   border-radius: 16px;
-  background: #eef4ff;
-  color: #1a5bb8;
+  background: var(--composer-control);
+  color: var(--composer-control-ink);
   font-size: 0.82rem;
   font-weight: 800;
 }
@@ -83,8 +95,8 @@
 .removeAttachment {
   border: 0;
   border-radius: 50%;
-  background: #fff;
-  color: #c0392b;
+  background: var(--composer-surface);
+  color: var(--composer-danger-ink);
   font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
@@ -96,7 +108,7 @@
 
 .errorMsg {
   margin-top: 0.3rem;
-  color: #c0392b;
+  color: var(--composer-danger-ink);
   font-size: 0.85rem;
 }
 
@@ -112,8 +124,8 @@
   align-items: center;
   padding: 0.45rem 0.95rem;
   border-radius: 999px;
-  background: #eef4ff;
-  color: #1a5bb8;
+  background: var(--composer-control);
+  color: var(--composer-control-ink);
   font-size: 0.8rem;
   font-weight: 800;
   cursor: pointer;
@@ -121,7 +133,7 @@
 }
 
 .attachmentButton:hover {
-  background: #dfeaff;
+  background: var(--composer-control-hover);
 }
 
 .attachmentButton input {
@@ -133,7 +145,7 @@
   padding: 0.55rem 1.6rem;
   border: 0;
   border-radius: 999px;
-  background: linear-gradient(120deg, #e04141, #c0392b);
+  background: linear-gradient(120deg, #e04141, var(--composer-danger-ink));
   color: #fff;
   font: 800 0.85rem/1.2 "DM Sans", "Segoe UI", sans-serif;
   cursor: pointer;
@@ -144,3 +156,4 @@
 .postButton:hover {
   filter: brightness(1.08);
 }
+
