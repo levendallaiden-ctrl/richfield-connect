@@ -1,28 +1,38 @@
 import termsMarkdown from "./terms-and-conditions.md?raw";
 import styles from "./TermsAndConditions.module.css";
 
+function formatInline(text) {
+  return text.split(/(\*\*[^*]+\*\*)/).map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+
+    return part;
+  });
+}
+
 function renderLine(line, index) {
   if (line.startsWith("## ")) {
-    return <h2 key={index}>{line.slice(3)}</h2>;
+    return <h2 key={index}>{formatInline(line.slice(3))}</h2>;
   }
 
   if (line.startsWith("### ")) {
-    return <h3 key={index}>{line.slice(4)}</h3>;
+    return <h3 key={index}>{formatInline(line.slice(4))}</h3>;
   }
 
   if (line.startsWith("- ")) {
-    return <li key={index}>{line.slice(2)}</li>;
+    return <li key={index}>{formatInline(line.slice(2))}</li>;
   }
 
   if (line.startsWith("> ")) {
-    return <aside className={styles.notice} key={index}>{line.slice(2)}</aside>;
+    return <aside className={styles.notice} key={index}>{formatInline(line.slice(2))}</aside>;
   }
 
   if (!line.trim()) {
     return <div className={styles.spacer} key={index} aria-hidden="true" />;
   }
 
-  return <p key={index}>{line}</p>;
+  return <p key={index}>{formatInline(line)}</p>;
 }
 
 function TermsAndConditions() {
