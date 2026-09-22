@@ -1,10 +1,10 @@
-# Terms and Conditions
+﻿# Terms and Conditions
 
-**Effective Date:** [Date]  
-**Website Name:** [Website Name]  
-**Website Address:** [Website URL]  
-**Owner / Operator:** [Legal Name of Website Owner]  
-**Contact Email:** [Contact Email]
+**Effective Date:** 22 September 2026  
+**Website Name:** Richfield Connect  
+**Website Address:** https://github.com/levendallaiden-ctrl/richfield-connect  
+**Owner / Operator:** Aiden Levendall  
+**Contact Email:** 402411117@my.richfield.ac.za
 
 > **Important:** This template must be adapted to your specific circumstances. Before publication, consider review by a suitably qualified South African legal practitioner, particularly if the Platform processes payments, provides professional services, or processes special personal information.
 
@@ -12,11 +12,11 @@
 
 ### 1.1 Agreement
 
-These Terms and Conditions ("**Terms**") govern your access to and use of [Website Name], including its website, portfolio features, account services, tools, content-upload functionality, and related services (collectively, the "**Platform**").
+These Terms and Conditions ("**Terms**") govern your access to and use of Richfield Connect, including its website, student community profiles, account services, posts, comments, user-upload functionality, and related services (collectively, the "**Platform**").
 
 In these Terms:
 
-- "**we**", "**us**", "**our**", and "**Website Owner**" mean [Legal Name of Website Owner].
+- "**we**", "**us**", "**our**", and "**Website Owner**" mean Aiden Levendall.
 - "**you**", "**your**", and "**User**" mean any person who accesses or uses the Platform.
 - "**Content**" means text, images, photographs, illustrations, videos, audio, documents, designs, links, code, data, portfolio entries, comments, and other material.
 - "**User-Generated Content**" or "**UGC**" means Content that you submit, upload, publish, transmit, display, or otherwise make available through the Platform.
@@ -44,15 +44,15 @@ We may amend, update, replace, or discontinue any part of these Terms from time 
 
 For purposes of section 43 of ECTA, where applicable:
 
-- **Full legal name:** [Legal Name of Website Owner]
-- **Trading name:** [Website Name], if different
-- **Physical address:** [Physical Address]
-- **Postal address:** [Postal Address]
-- **Contact email:** [Contact Email]
-- **Telephone number:** [Telephone Number]
-- **Registration number, if applicable:** [Company / Close Corporation / Trust Registration Number]
-- **VAT number, if applicable:** [VAT Number]
-- **Professional or industry memberships, if applicable:** [Relevant Membership Details]
+- **Full legal name:** Aiden Levendall
+- **Trading name:** Richfield Connect, if different
+- **Physical address:** Cape Town Campus, Long Street, Cape Town, Western Cape, South Africa
+- **Postal address:** Cape Town Campus, Long Street, Cape Town, Western Cape, South Africa
+- **Contact email:** 402411117@my.richfield.ac.za
+- **Telephone number:** 086 132 1321
+- **Registration number, if applicable:** Not applicable (frontend-only student prototype)
+- **VAT number, if applicable:** Not applicable
+- **Professional or industry memberships, if applicable:** Not applicable
 
 ## 3. Eligibility and Acceptable Use
 
@@ -76,7 +76,7 @@ You may use the Platform only for lawful purposes and in accordance with these T
 
 ### 3.3 No Reliance on Portfolio Content
 
-Portfolio material and other Platform Content may be provided for informational, illustrative, or professional showcase purposes. Unless expressly agreed otherwise in writing, nothing on the Platform constitutes legal, financial, technical, employment, investment, medical, or other professional advice. Independently verify information before relying on it.
+Platform Content may be provided for informational, illustrative, or educational showcase purposes. Unless expressly agreed otherwise in writing, nothing on the Platform constitutes legal, financial, technical, employment, investment, medical, or other professional advice. Independently verify information before relying on it.
 
 ## 4. User Accounts
 
@@ -95,7 +95,7 @@ We may refuse registration, reclaim usernames, or require changes to account det
 
 ### 4.2 Account Security
 
-You are responsible for maintaining the confidentiality of your password and authentication credentials, restricting access to your device and account, and all activity through your account. You must promptly notify us at [Contact Email] if you suspect unauthorised access, loss, theft, or misuse of credentials. You may not sell, transfer, share, sublicense, lend, or permit another person to use your account unless we expressly authorise it in writing.
+You are responsible for maintaining the confidentiality of your password and authentication credentials, restricting access to your device and account, and all activity through your account. You must promptly notify us at 402411117@my.richfield.ac.za if you suspect unauthorised access, loss, theft, or misuse of credentials. You may not sell, transfer, share, sublicense, lend, or permit another person to use your account unless we expressly authorise it in writing.
 
 ### 4.3 Suspension and Termination
 
@@ -103,7 +103,7 @@ We may suspend, restrict, disable, or terminate an account or access immediately
 
 ### 4.4 Account Closure
 
-You may request closure by contacting [Contact Email], subject to retention obligations, dispute holds, legal requirements, and backup processes. Closure may result in loss of access to UGC, settings, and account information. You must keep your own copies of UGC. We do not guarantee Content availability after closure, suspension, termination, or removal.
+You may request closure by contacting 402411117@my.richfield.ac.za, subject to retention obligations, dispute holds, legal requirements, and backup processes. Closure may result in loss of access to UGC, settings, and account information. You must keep your own copies of UGC. We do not guarantee Content availability after closure, suspension, termination, or removal.
 
 ## 5. User-Generated Content
 
@@ -163,11 +163,11 @@ UGC is created and controlled by users, not us. To the maximum extent permitted 
 
 ### 5.6 Copyright and Rights Complaints
 
-If you believe Content infringes your copyright or other rights, notify [Legal Notices Email] with your name and contact information, identification of the affected work or right, the URL or location of the allegedly infringing Content, a clear explanation of the complaint, a statement that the information is accurate and that you are the rights holder or authorised representative, and supporting documents sufficient for assessment. We may request more information and notify the relevant user where appropriate.
+If you believe Content infringes your copyright or other rights, notify 402411117@my.richfield.ac.za with your name and contact information, identification of the affected work or right, the URL or location of the allegedly infringing Content, a clear explanation of the complaint, a statement that the information is accurate and that you are the rights holder or authorised representative, and supporting documents sufficient for assessment. We may request more information and notify the relevant user where appropriate.
 
 ### 5.7 Indemnity for UGC
 
-You indemnify, defend, and hold harmless the Website Owner, its affiliates, licensors, service providers, and their directors, officers, employees, contractors, and agents from claims, proceedings, losses, liabilities, damages, costs, expenses, and reasonable legal fees arising out of or connected with your UGC, breach of clauses 5.1 to 5.3, an allegation that your UGC infringes a third party’s rights, or unlawful use of the Platform. This indemnity applies to the extent permitted by law.
+You indemnify, defend, and hold harmless the Website Owner, its affiliates, licensors, service providers, and their directors, officers, employees, contractors, and agents from claims, proceedings, losses, liabilities, damages, costs, expenses, and reasonable legal fees arising out of or connected with your UGC, breach of clauses 5.1 to 5.3, an allegation that your UGC infringes a third partyâ€™s rights, or unlawful use of the Platform. This indemnity applies to the extent permitted by law.
 
 ## 6. Intellectual Property Rights
 
@@ -193,13 +193,13 @@ Except where permitted by law or expressly authorised in writing, you may not:
 
 ### 6.4 Trade Marks
 
-[Website Name], our logos, and associated branding may be trade marks or registered trade marks of the Website Owner or its licensors. You may not use them without prior written consent.
+Richfield Connect, our logos, and associated branding may be trade marks or registered trade marks of the Website Owner or its licensors. You may not use them without prior written consent.
 
 ## 7. Privacy and Protection of Personal Information
 
-We process personal information in accordance with applicable data-protection laws, including the Protection of Personal Information Act 4 of 2013 ("**POPIA**"). Our collection, use, storage, sharing, retention, security, and deletion of personal information are described in the separate **Privacy Policy** at [Privacy Policy URL], which is incorporated into these Terms by reference.
+We process personal information in accordance with applicable data-protection laws, including the Protection of Personal Information Act 4 of 2013 ("**POPIA**"). This is a frontend-only student prototype. Account details, posts, comments, likes, and attachment metadata are stored in your browser's localStorage on your device. The Platform does not use a server-side database or backend service. Do not submit sensitive personal information or real passwords. A production version must have a separate Privacy Policy and appropriate POPIA compliance measures before deployment.
 
-By using the Platform, you acknowledge that you have read the Privacy Policy. If you upload or otherwise process personal information through the Platform, you warrant that you have a lawful basis and have provided all notices and obtained all consents required under POPIA and other applicable law. For privacy queries or requests, contact [Information Officer Contact Email].
+By using the Platform, you acknowledge the frontend-only prototype and localStorage notice above. If you upload or otherwise process personal information through the Platform, you warrant that you have a lawful basis and have provided all notices and obtained all consents required under POPIA and other applicable law. For privacy queries or requests, contact 402411117@my.richfield.ac.za.
 
 ## 8. Third-Party Services and Links
 
@@ -246,7 +246,7 @@ This limitation does not apply to liability that cannot lawfully be limited or e
 
 ## 12. General Indemnity
 
-In addition to the UGC indemnity, you indemnify and hold harmless the Website Owner and its affiliates, licensors, service providers, directors, officers, employees, contractors, and agents against claims, losses, liabilities, damages, costs, and reasonable legal expenses arising from your use of the Platform, breach of these Terms or law, violation of a third party’s rights, or fraud, negligence, wilful misconduct, or unlawful conduct.
+In addition to the UGC indemnity, you indemnify and hold harmless the Website Owner and its affiliates, licensors, service providers, directors, officers, employees, contractors, and agents against claims, losses, liabilities, damages, costs, and reasonable legal expenses arising from your use of the Platform, breach of these Terms or law, violation of a third partyâ€™s rights, or fraud, negligence, wilful misconduct, or unlawful conduct.
 
 ## 13. Electronic Notices and Communications
 
@@ -262,13 +262,13 @@ Provisions which by nature should survive termination will survive, including pr
 
 These Terms, your use of the Platform, and any dispute or claim arising from or connected with them are governed by the laws of the **Republic of South Africa**.
 
-Subject to applicable law, you consent to the jurisdiction of the courts of **[Province, South Africa]** for any dispute arising from or relating to these Terms or the Platform.
+Subject to applicable law, you consent to the jurisdiction of the courts of **Western Cape, South Africa** for any dispute arising from or relating to these Terms or the Platform.
 
 Nothing prevents us from seeking urgent, interim, injunctive, or equitable relief in any court of competent jurisdiction, including to protect intellectual property, confidential information, systems, or users.
 
 ## 16. Dispute Resolution
 
-Before instituting legal proceedings, you agree to contact us at [Legal Notices Email] with a written description of the dispute, relevant facts, and relief sought. The parties will attempt in good faith to resolve it informally for at least 14 business days after receipt of notice, unless urgent relief is required. If unresolved, either party may pursue remedies available under South African law in a court with appropriate jurisdiction.
+Before instituting legal proceedings, you agree to contact us at 402411117@my.richfield.ac.za with a written description of the dispute, relevant facts, and relief sought. The parties will attempt in good faith to resolve it informally for at least 14 business days after receipt of notice, unless urgent relief is required. If unresolved, either party may pursue remedies available under South African law in a court with appropriate jurisdiction.
 
 ## 17. General Provisions
 
@@ -300,11 +300,11 @@ We are not liable for a failure or delay in performance caused by events beyond 
 
 For support, complaints, legal notices, rights-related complaints, or questions about these Terms, contact:
 
-- **Website Owner:** [Legal Name of Website Owner]
-- **Website Name:** [Website Name]
-- **Email:** [Contact Email]
-- **Legal Notices Email:** [Legal Notices Email]
-- **Physical Address:** [Physical Address]
-- **Telephone:** [Telephone Number]
+- **Website Owner:** Aiden Levendall
+- **Website Name:** Richfield Connect
+- **Email:** 402411117@my.richfield.ac.za
+- **Legal Notices Email:** 402411117@my.richfield.ac.za
+- **Physical Address:** Cape Town Campus, Long Street, Cape Town, Western Cape, South Africa
+- **Telephone:** 086 132 1321
 
-By using [Website Name], you acknowledge that you have read, understood, and agreed to these Terms and Conditions.
+By using Richfield Connect, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.
