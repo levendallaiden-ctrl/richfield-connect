@@ -212,16 +212,16 @@ textarea {
 }
 
 :global(body.dark) .input,
-:global(body.dark) textarea,
-:global(body.dark) select {
+:global(body.dark) .signupPage textarea,
+:global(body.dark) .signupPage select {
   border-color: var(--theme-line);
   background: var(--theme-input);
   color: var(--theme-ink);
 }
 
 :global(body.dark) .input:focus,
-:global(body.dark) textarea:focus,
-:global(body.dark) select:focus {
+:global(body.dark) .signupPage textarea:focus,
+:global(body.dark) .signupPage select:focus {
   border-color: #6d9fe8;
   background: #17233a;
 }
