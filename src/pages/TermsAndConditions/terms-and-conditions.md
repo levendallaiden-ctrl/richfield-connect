@@ -1,9 +1,9 @@
 ﻿# Terms and Conditions
 
-**Effective Date:** 22 September 2026  
-**Website Name:** Richfield Connect  
-**Website Address:** https://github.com/levendallaiden-ctrl/richfield-connect  
-**Owner / Operator:** Aiden Levendall  
+**Effective Date:** 22 September 2026
+**Website Name:** Richfield Connect
+**Website Address:** https://github.com/levendallaiden-ctrl/richfield-connect
+**Owner / Operator:** Aiden Levendall
 **Contact Email:** 402411117@my.richfield.ac.za
 
 > **Important:** This template must be adapted to your specific circumstances. Before publication, consider review by a suitably qualified South African legal practitioner, particularly if the Platform processes payments, provides professional services, or processes special personal information.
