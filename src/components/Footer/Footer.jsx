@@ -25,6 +25,9 @@ function Footer() {
             <Link to="/feed" className={styles.footerLink}>
               Feed
             </Link>
+            <Link to="/terms-and-conditions" className={styles.footerLink}>
+              Terms & Conditions
+            </Link>
           </nav>
         </div>
 

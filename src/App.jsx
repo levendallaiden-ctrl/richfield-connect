@@ -18,6 +18,7 @@ import People from "./pages/People/People";
 import Feed from "./pages/Feed/Feed";
 import Admin from "./pages/Admin/Admin";
 import NotFound from "./pages/NotFound/NotFound";
+import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 
 import styles from "./App.module.css";
 
@@ -67,6 +68,7 @@ function AppLayout() {
             <Route path="/people" element={<People />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </PageTransition>
