@@ -33,15 +33,17 @@ export function hasGroupAccess(user, group, membership) {
 }
 
 function isGroupAdmin(membership) {
-  return (
+  return Boolean(
     membership &&
-    membership.status === MEMBER_STATUS.ACTIVE &&
-    membership.role === GROUP_ROLES.GROUP_ADMIN
+      membership.status === MEMBER_STATUS.ACTIVE &&
+      membership.role === GROUP_ROLES.GROUP_ADMIN,
   );
 }
 
 function isActiveMember(membership) {
-  return membership && membership.status === MEMBER_STATUS.ACTIVE;
+  return Boolean(
+    membership && membership.status === MEMBER_STATUS.ACTIVE,
+  );
 }
 
 /**

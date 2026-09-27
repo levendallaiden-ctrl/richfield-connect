@@ -19,6 +19,9 @@ import Feed from "./pages/Feed/Feed";
 import Admin from "./pages/Admin/Admin";
 import NotFound from "./pages/NotFound/NotFound";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
+import { GroupsProvider } from "./features/groups/GroupsContext";
+import GroupsPage from "./features/groups/pages/GroupsPage";
+import GroupDetailPage from "./features/groups/pages/GroupDetailPage";
 
 import styles from "./App.module.css";
 
@@ -67,6 +70,22 @@ function AppLayout() {
             <Route path="/profile/:email" element={<Profile />} />
             <Route path="/people" element={<People />} />
             <Route path="/feed" element={<Feed />} />
+            <Route
+              path="/groups"
+              element={
+                <SignedInOnly>
+                  <GroupsPage />
+                </SignedInOnly>
+              }
+            />
+            <Route
+              path="/groups/:groupId"
+              element={
+                <SignedInOnly>
+                  <GroupDetailPage />
+                </SignedInOnly>
+              }
+            />
             <Route path="/admin" element={<Admin />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="*" element={<NotFound />} />
@@ -95,9 +114,11 @@ function App() {
   return (
     <ThemeProvider>
       <AppProvider>
-        <BrowserRouter>
-          <AppLayout />
-        </BrowserRouter>
+        <GroupsProvider>
+          <BrowserRouter>
+            <AppLayout />
+          </BrowserRouter>
+        </GroupsProvider>
       </AppProvider>
     </ThemeProvider>
   );

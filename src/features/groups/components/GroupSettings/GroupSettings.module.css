@@ -1,0 +1,93 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.input,
+.textarea,
+.select {
+  font: inherit;
+  color: var(--text-strong);
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--richfield-blue);
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.14);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.saveButton {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.25rem;
+}
+
+.saveButton:hover {
+  background: var(--richfield-blue-light);
+}
+
+.deleteButton {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #c62828;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-sm);
+}
+
+.deleteButton:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+
+@media (max-width: 520px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

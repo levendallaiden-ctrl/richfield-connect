@@ -1,0 +1,127 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(20, 26, 46, 0.55);
+}
+
+.dialog {
+  width: 100%;
+  max-width: 440px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-strong);
+}
+
+.closeButton {
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--richfield-mid-grey);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.closeButton:hover {
+  background: var(--richfield-light-grey);
+  color: var(--text-strong);
+}
+
+.dropzone {
+  border: 2px dashed var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.dragging {
+  border-color: var(--richfield-blue);
+  background: rgba(0, 48, 135, 0.05);
+}
+
+.dropText {
+  margin: 0;
+  color: var(--richfield-mid-grey);
+  font-size: 0.9rem;
+}
+
+.pickButton {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.pickButton:hover {
+  background: var(--richfield-blue-light);
+}
+
+.fileInfo {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-strong);
+  overflow-wrap: anywhere;
+}
+
+.warning {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: #b26a00;
+}
+
+.error {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: #c62828;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.cancelButton {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--richfield-light-grey);
+  background: transparent;
+  color: var(--text-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 1.1rem;
+}
+
+.cancelButton:hover {
+  background: var(--richfield-light-grey);
+}

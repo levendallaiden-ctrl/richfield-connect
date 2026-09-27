@@ -1,0 +1,205 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.composer {
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.textarea {
+  font: inherit;
+  color: var(--text-strong);
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--richfield-blue);
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.14);
+}
+
+.textarea:disabled {
+  opacity: 0.6;
+}
+
+.attachmentPreview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  background: var(--richfield-light-grey);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.6rem;
+  overflow-wrap: anywhere;
+}
+
+.removeAttachment {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--richfield-mid-grey);
+}
+
+.removeAttachment:hover {
+  color: var(--text-strong);
+}
+
+.composerActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.attachButton {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--richfield-blue);
+  background: transparent;
+  color: var(--richfield-blue);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+}
+
+.attachButton:hover:not(:disabled) {
+  background: rgba(0, 48, 135, 0.08);
+}
+
+.attachButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.postButton {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1.25rem;
+}
+
+.postButton:hover:not(:disabled) {
+  background: var(--richfield-blue-light);
+}
+
+.postButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.empty {
+  text-align: center;
+  color: var(--richfield-mid-grey);
+  padding: 2.5rem 1rem;
+  background: var(--surface);
+  border: 1px dashed var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item {
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.author {
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--text-strong);
+}
+
+.when {
+  font-size: 0.75rem;
+  color: var(--richfield-mid-grey);
+  white-space: nowrap;
+}
+
+.content {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-strong);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.attachment {
+  margin-top: 0.25rem;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+.fileLink {
+  color: var(--richfield-blue);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.itemActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteButton {
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #c62828;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.deleteButton:hover {
+  background: rgba(198, 40, 40, 0.08);
+}

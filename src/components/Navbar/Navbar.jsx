@@ -8,6 +8,7 @@ const navItems = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
   { to: "/feed", label: "Feed" },
+  { to: "/groups", label: "Groups" },
   { to: "/people", label: "People" },
   { to: "/profile", label: "Profile" },
 ];

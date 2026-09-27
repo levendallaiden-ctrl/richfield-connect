@@ -1,0 +1,155 @@
+.page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-sizing: border-box;
+}
+
+.backLink {
+  color: var(--richfield-blue);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  align-self: flex-start;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.status {
+  text-align: center;
+  color: var(--richfield-mid-grey);
+  padding: 3rem 1rem;
+  background: var(--surface);
+  border: 1px dashed var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem 1.5rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--text-strong);
+}
+
+.meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--richfield-mid-grey);
+}
+
+.description {
+  margin: 0.6rem 0 0;
+  color: var(--text-strong);
+  font-size: 0.95rem;
+}
+
+.leaveButton {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--richfield-light-grey);
+  background: transparent;
+  color: var(--richfield-mid-grey);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.leaveButton:hover {
+  background: var(--richfield-light-grey);
+  color: var(--text-strong);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--richfield-light-grey);
+  background: var(--surface);
+  color: var(--richfield-mid-grey);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+}
+
+.tab:hover {
+  border-color: var(--richfield-blue);
+  color: var(--richfield-blue);
+}
+
+.activeTab {
+  background: var(--richfield-blue);
+  border-color: var(--richfield-blue);
+  color: var(--richfield-white);
+}
+
+.tabPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.lockedCard {
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  max-width: 640px;
+}
+
+.lockedNote {
+  margin: 0;
+  color: var(--richfield-mid-grey);
+  font-size: 0.92rem;
+}
+
+.primaryButton {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.primaryButton:hover {
+  background: var(--richfield-blue-light);
+}
+
+.pendingLabel {
+  font-weight: 700;
+  color: var(--richfield-mid-grey);
+  margin-top: 0.5rem;
+}

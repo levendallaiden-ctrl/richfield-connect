@@ -1,0 +1,156 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitle {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  color: var(--text-strong);
+}
+
+.empty {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--richfield-mid-grey);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 0.65rem 0.85rem;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-strong);
+  overflow-wrap: anywhere;
+}
+
+.email {
+  font-size: 0.78rem;
+  color: var(--richfield-mid-grey);
+  overflow-wrap: anywhere;
+}
+
+.rowActions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.adminBadge,
+.memberBadge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+}
+
+.adminBadge {
+  background: rgba(0, 48, 135, 0.1);
+  color: var(--richfield-blue);
+}
+
+.memberBadge {
+  background: var(--richfield-light-grey);
+  color: var(--richfield-mid-grey);
+}
+
+.smallButton {
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--richfield-blue);
+  background: transparent;
+  color: var(--richfield-blue);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.7rem;
+}
+
+.smallButton:hover {
+  background: rgba(0, 48, 135, 0.08);
+}
+
+.dangerButton {
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #c62828;
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.6rem;
+}
+
+.dangerButton:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+
+.inviteForm {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.inviteInput {
+  font: inherit;
+  flex: 1;
+  min-width: 200px;
+  color: var(--text-strong);
+  background: var(--surface);
+  border: 1px solid var(--richfield-light-grey);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.8rem;
+}
+
+.inviteInput:focus {
+  outline: none;
+  border-color: var(--richfield-blue);
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.14);
+}
+
+.inviteButton {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: var(--richfield-blue);
+  color: var(--richfield-white);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.1rem;
+}
+
+.inviteButton:hover {
+  background: var(--richfield-blue-light);
+}

@@ -29,6 +29,7 @@
  * @property {number} size
  * @property {string} mimeType
  * @property {string} dataUrl
+ * @property {string} [fileId] id of the mirrored SharedFile row (set by postMessage)
  *
  * @typedef {Object} GroupMessage
  * @property {string} id
